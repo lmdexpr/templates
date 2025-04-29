@@ -1,0 +1,18 @@
+(lang dune 3.16)
+
+(name changeme)
+
+(license MIT)
+
+(maintainers "Yuki Tajiri <lmdexpr@gmail.com>")
+(authors "Yuki Tajiri")
+(source (github lmdexpr/changeme))
+
+(generate_opam_files true)
+
+(package
+  (name changeme)
+  (synopsis "changeme")
+  (depends
+    (ocaml (>= 5.3))
+    ))
