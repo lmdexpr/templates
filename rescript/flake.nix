@@ -15,7 +15,9 @@
           pkgs.mkShell {
             buildInputs = with pkgs; [ 
               nil nixpkgs-fmt 
-              nodejs_24
+              nodejs_20
+              typescript-language-server
+              rescript-language-server
             ];
           };
       });
