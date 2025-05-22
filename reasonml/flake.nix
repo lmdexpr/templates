@@ -24,7 +24,10 @@
 
         nativeBuildInputs = otherNativeBuildInputs ++ ocamlNativeBuildInputs;
 
-        buildInputs = with pkgs.ocamlPackages; [
+        otherBuildInputs = [
+          pkgs.typescript-language-server
+        ];
+        ocamlBuildInputs = with pkgs.ocamlPackages; [
           reason-react
           reason-react-ppx
 
@@ -33,6 +36,7 @@
 
           ocaml-lsp
         ];
+        buildInputs = otherBuildInputs ++ ocamlBuildInputs;
       in
       {
         legacyPackages = pkgs;
