@@ -3,13 +3,32 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
   };
-  outputs = { flake-utils, nixpkgs, ... }:
+  outputs = { self, flake-utils, nixpkgs, ... }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
+
+        artifact = pkgs.buildNpmPackage {
+          name = "rescript";
+
+          buildInputs = with pkgs; [
+            nodejs_20
+          ];
+
+          src = self;
+
+          npmDeps = pkgs.importNpmLock {
+            npmRoot = ./.;
+          };
+
+          npmConfigHook = pkgs.importNpmLock.npmConfigHook;
+        };
       in
       {
         legacyPackages = pkgs;
+        packages = {
+          default = artifact;
+        };
 
         devShells.default =
           pkgs.mkShell {
