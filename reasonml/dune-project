@@ -1,0 +1,31 @@
+(lang dune 3.17)
+(using melange 0.1)
+
+; Declares the use of the directory-targets extension, useful for managing 
+; directory-level build targets.
+(using directory-targets 0.1)
+
+(name changeme)
+
+(generate_opam_files true)
+
+(maintainers "Yuki Tajiri <lmdexpr@gmail.com>")
+(authors "Yuki Tajiri")
+(source (github lmdexpr/changeme))
+
+(license MIT)
+
+(package
+  (name changeme)
+  (synopsis "Enter a synopsis of your app here")
+  (description "Enter a description of your app here")
+  (allow_empty) 
+  (depends
+    dune
+    ocaml
+    ppx_deriving
+    reason
+    reason-react
+    reason-react-ppx
+    melange
+    ))
