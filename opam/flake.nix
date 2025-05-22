@@ -45,9 +45,6 @@
       in
       {
         legacyPackages = pkgs;
-        packages = {
-          default = localPackages.discord;
-        };
 
         devShells.default =
           pkgs.mkShell {
