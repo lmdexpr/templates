@@ -8,11 +8,12 @@
       let
         pkgs = nixpkgs.legacyPackages.${system};
 
+        target = "changeme";
         artifact = pkgs.buildNpmPackage {
-          name = "rescript";
+          name = target;
 
           buildInputs = with pkgs; [
-            nodejs_20
+            nodejs_24
           ];
 
           src = self;
@@ -34,10 +35,18 @@
           pkgs.mkShell {
             buildInputs = with pkgs; [ 
               nil nixpkgs-fmt 
-              nodejs_20
+              nodejs_24
               typescript-language-server
-              rescript-language-server
+              artifact
             ];
+            shellHook = ''
+              if [ ! -d "./node_modules" ]; then
+                npm install
+              fi
+              if [ -d "./node_modules/.bin" ]; then
+                export PATH="$PATH:$(pwd)/node_modules/.bin"
+              fi
+            '';
           };
       });
 }
