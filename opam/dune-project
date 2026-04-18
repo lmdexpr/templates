@@ -1,4 +1,4 @@
-(lang dune 3.16)
+(lang dune 3.22)
 
 (name changeme)
 
@@ -14,5 +14,5 @@
   (name changeme)
   (synopsis "changeme")
   (depends
-    (ocaml (>= 5.3))
+    (ocaml (>= 5.4))
     ))
