@@ -8,7 +8,7 @@
     description = "OCaml 5.3 project w/ opam.";
   };
   fullstack = {
-    path = ./ocaml-and-rescript;
+    path = ./fullstack;
     description = "OCaml 5.3 project and ReScript SPA.";
   };
 }
