@@ -1,0 +1,13 @@
+(executable
+ (public_name changeme)
+ (name main)
+ (libraries
+  eio
+  eio_main
+  cohttp-eio
+  mirage-crypto-rng.unix
+  http
+  logs
+  logs.fmt
+  logs.threaded
+  uri))

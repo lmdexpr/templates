@@ -7,8 +7,8 @@
     path = ./opam;
     description = "OCaml 5.3 project w/ opam.";
   };
-  rescript = {
-    path = ./rescript;
-    description = "ReScript template using nix.";
+  ocaml-and-rescript = {
+    path = ./ocaml-and-rescript;
+    description = "OCaml 5.3 project and ReScript SPA.";
   };
 }

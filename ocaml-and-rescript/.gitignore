@@ -1,0 +1,28 @@
+# OCaml / Dune
+_build/
+*.install
+_opam/
+.merlin
+
+# Nix / direnv
+result
+result-*
+.direnv
+
+# ReScript
+/lib/
+.bsb.lock
+**/*.res.mjs
+
+# JS / Node
+node_modules
+dist
+dist-ssr
+*.local
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# direnv
+.direnv

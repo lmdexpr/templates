@@ -1,0 +1,29 @@
+(lang dune 3.20)
+
+(name changeme)
+
+(license MIT)
+
+(maintainers "Yuki Tajiri <lmdexpr@gmail.com>")
+(authors "Yuki Tajiri")
+(source (github lmdexpr/changeme))
+
+(generate_opam_files true)
+
+(package
+  (name changeme)
+  (synopsis "changeme")
+  (depends
+    (ocaml (>= 5.3))
+    eio
+    eio_main
+    cohttp-eio
+    tls-eio
+    ca-certs
+    mirage-crypto-rng-eio
+    http
+    logs
+    uri
+    (ocaml-lsp-server :with-dev-setup)
+    (ocamlformat :with-dev-setup)
+    ))
