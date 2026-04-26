@@ -14,8 +14,8 @@ OCaml project.
 nix flake init -t 'github:lmdexpr/templates#opam'
 ```
 
-## ocaml-and-rescript
+## OCaml API server and Rescript SPA
 
 ```sh 
-nix flake init -t 'github:lmdexpr/templates#ocaml-and-rescript'
+nix flake init -t 'github:lmdexpr/templates#fullstack'
 ```
