@@ -14,11 +14,8 @@ OCaml project.
 nix flake init -t 'github:lmdexpr/templates#opam'
 ```
 
-## rescript
+## ocaml-and-rescript
 
-use create-rescript-app
-https://rescript-lang.org/docs/manual/installation
-
-```sh
-npm create rescript-app@latest
+```sh 
+nix flake init -t 'github:lmdexpr/templates#ocaml-and-rescript'
 ```
